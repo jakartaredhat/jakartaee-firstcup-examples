@@ -38,7 +38,6 @@
     <modules>
         <module>firstcup-war</module>
         <module>dukes-age</module>
-        <module>archetypes</module>
     </modules>
 
     <properties>
@@ -52,7 +51,6 @@
         <!-- maven plugins -->
         <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
         <maven.war.plugin.version>3.3.2</maven.war.plugin.version>
-        <maven.license.plugin.version>1.10.b1</maven.license.plugin.version>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
@@ -71,39 +69,6 @@
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.mycila.maven-license-plugin</groupId>
-                <artifactId>maven-license-plugin</artifactId>
-                <version>${maven.license.plugin.version}</version>
-                <configuration>
-                    <header>common/license.txt</header>
-                    <excludes>
-                        <exclude>common/**</exclude>
-                        <exclude>**/META-INF/**</exclude>
-                        <exclude>**/WEB-INF/**</exclude>
-                        <exclude>**/nbactions.xml</exclude>
-                        <exclude>**/nb-configuration.xml</exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.2</version>
-                <configuration>
-                    <mavenExecutorId>forked-path</mavenExecutorId>
-                    <useReleaseProfile>false</useReleaseProfile>
-                    <arguments>${release.arguments}</arguments>
-                    <tagNameFormat>@{project.version}</tagNameFormat>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.scm</groupId>
-                        <artifactId>maven-scm-provider-gitexe</artifactId>
-                        <version>1.9.4</version>
-                    </dependency>
-                </dependencies>
             </plugin>
 
         </plugins>

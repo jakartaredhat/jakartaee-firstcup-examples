@@ -14,8 +14,8 @@
 package ${package}.ejb;
 
 import ${package}.entity.FirstcupUser;
+import java.time.LocalDate;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -40,7 +40,7 @@ public class DukesBirthdayBean {
 		// Insert code here
     }
 
-    public int getAgeDifference(Date date) {
+    public int getAgeDifference(LocalDate date) {
 		// Insert code here
     }
 }
