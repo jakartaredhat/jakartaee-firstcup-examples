@@ -1,5 +1,5 @@
 # First Cup of Jakarta Examples
-# version: 1.1
+# version: 1.2
 
 This version targets Jakarta EE 10.
 
